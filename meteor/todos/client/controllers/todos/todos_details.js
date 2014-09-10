@@ -10,6 +10,7 @@ TodosDetailController = RouteController.extend({
   },
 
   action: function () {
+    this.layout('NoBreadcrumbs');
     this.render();
   }
 });
