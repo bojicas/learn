@@ -1,30 +1,50 @@
 /*****************************************************************************/
 /* Global CSS Styles */
 /*****************************************************************************/
-/* CSS declarations go here */
 body {
   font-size: 14pt;
   color: #777;
 }
 
+.box-sizing(@value) {
+  box-sizing: @value;
+  -webkit-box-sizing: @value;
+  -moz-box-sizing: @value;
+}
+
+.border-radius(@value) {
+  border-radius: @value;
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+}
+
 .container {
   margin: 20px auto;
-  width: 940px;
+  max-width: 940px;
 }
 
 .login {
   margin: 20px 0px;
+  float: right;
 }
 
 .todos-panel {
 }
 
-.create-todo input {
-  width: 100%;
-  padding: 10px;
-  font-size: 18pt;
-  height: 24pt;
-  line-height: 24pt;
+.create-todo {
+  background: #fff;
+  overflow: hidden;
+  .border-radius(6px);
+
+  input {
+    width: 100%;
+    .box-sizing(border-box);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 18pt;
+    height: 24pt;
+    line-height: 24pt;
+  }
 }
 
 .todos-count {
@@ -62,5 +82,9 @@ body {
   .subject {
     float: left;
     padding-left: 20px;
+  }
+
+  .action {
+    float: right;
   }
 }
