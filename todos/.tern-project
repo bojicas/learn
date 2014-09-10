@@ -4,7 +4,8 @@
     "jquery",
     "underscore"
       ],
-    "loadEagerly": [ "*.js", "*/*.js", "*/*/*.js", "*/*/*/*.js" ],
+    "loadEagerly": [ "*.js", "*/*.js", "*/*/*.js", "*/*/*/*.js",
+      "~/.meteor/packages/*.js", "~/.meteor/packages/*/*.js", "~/.meteor/packages/*/*/*.js", "~/.meteor/packages/*/*/*/*.js" ],
     "dontLoad": [ ".meteor" ],
     "plugins": {
       "meteor": {}
