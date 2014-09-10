@@ -1,8 +1,8 @@
 
 /*****************************************************************************/
-/* TodosDetails: Event Handlers and Helpersss .js*/
+/* TodosDetail: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.TodosDetails.events({
+Template.TodosDetail.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -11,7 +11,7 @@ Template.TodosDetails.events({
    */
 });
 
-Template.TodosDetails.helpers({
+Template.TodosDetail.helpers({
   /*
    * Example:
    *  items: function () {
@@ -21,15 +21,15 @@ Template.TodosDetails.helpers({
 });
 
 /*****************************************************************************/
-/* TodosDetails: Lifecycle Hooks */
+/* TodosDetail: Lifecycle Hooks */
 /*****************************************************************************/
-Template.TodosDetails.created = function () {
+Template.TodosDetail.created = function () {
 };
 
-Template.TodosDetails.rendered = function () {
+Template.TodosDetail.rendered = function () {
 };
 
-Template.TodosDetails.destroyed = function () {
+Template.TodosDetail.destroyed = function () {
 };
 
 

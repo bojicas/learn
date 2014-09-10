@@ -1,4 +1,4 @@
-TodosDetailsController = RouteController.extend({
+TodosDetailController = RouteController.extend({
   waitOn: function () {
     var id = this.params._id;
     Meteor.subscribe('todos_detail', id);
