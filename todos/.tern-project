@@ -5,7 +5,9 @@
     "underscore"
       ],
     "loadEagerly": [ "*.js", "*/*.js", "*/*/*.js", "*/*/*/*.js",
-      "~/.meteor/packages/*.js", "~/.meteor/packages/*/*.js", "~/.meteor/packages/*/*/*.js", "~/.meteor/packages/*/*/*/*.js" ],
+      "~/.meteor/packages/*.js", "~/.meteor/packages/*/*.js", "~/.meteor/packages/*/*/*.js", "~/.meteor/packages/*/*/*/*.js",
+      "~/Developer/libs/meteor/*.js", "~/Developer/libs/meteor/packages/*/*.js", "~/Developer/libs/meteor/packages/*/*/*.js",
+      "~/Developer/libs/meteor/packages/*/*/*/*.js" ],
     "dontLoad": [ ".meteor" ],
     "plugins": {
       "meteor": {}
