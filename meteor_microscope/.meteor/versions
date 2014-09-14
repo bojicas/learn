@@ -17,6 +17,10 @@ html-tools@1.0.0
 htmljs@1.0.0
 id-map@1.0.0
 insecure@1.0.0
+iron:core@0.3.4
+iron:dynamic-template@0.4.1
+iron:layout@0.4.1
+iron:router@0.9.3
 jquery@1.0.0
 json@1.0.0
 livedata@1.0.9
@@ -34,6 +38,7 @@ reactive-var@1.0.1
 reload@1.0.1
 retry@1.0.0
 routepolicy@1.0.0
+sacha:spin@2.0.4
 session@1.0.1
 spacebars-compiler@1.0.2
 spacebars@1.0.1
