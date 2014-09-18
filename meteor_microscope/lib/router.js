@@ -12,6 +12,9 @@ Router.map(function () {
       return Posts.findOne(this.params._id);
     }
   });
+  this.route('postSubmit', {
+    path: '/submit'
+  });
 });
 
 Router.onBeforeAction('loading');
