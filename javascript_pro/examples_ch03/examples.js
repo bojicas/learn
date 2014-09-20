@@ -63,18 +63,57 @@ if (Meteor.isClient) {
   // console.log(num7); // 16 - parsed as hexadecimal
   // parseFloat
   // ----------
- // var num1 = parseFloat("1234blue");
- // console.log(num1); // 1234 - integer
- // var num1a = parseFloat(true);
- // console.log(num1a); // NaN
- // var num2 = parseFloat("0xA");
- // console.log(num2); // 0
- // var num3 = parseFloat("22.5");
- // console.log(num3); // 22.5
- // var num4 = parseFloat("22.34.5");
- // console.log(num4); // 22.34
- // var num5 = parseFloat("0908.5");
- // console.log(num5); // 908.5
- // var num6 = parseFloat("3.125e7");
- // console.log(num6); // 31250000
+  // var num1 = parseFloat("1234blue");
+  // console.log(num1); // 1234 - integer
+  // var num1a = parseFloat(true);
+  // console.log(num1a); // NaN
+  // var num2 = parseFloat("0xA");
+  // console.log(num2); // 0
+  // var num3 = parseFloat("22.5");
+  // console.log(num3); // 22.5
+  // var num4 = parseFloat("22.34.5");
+  // console.log(num4); // 22.34
+  // var num5 = parseFloat("0908.5");
+  // console.log(num5); // 908.5
+  // var num6 = parseFloat("3.125e7");
+  // console.log(num6); // 31250000
+
+  // The String Type
+  // ===============
+  // var firstName = "Nicholas";
+  // console.log(firstName);
+  // var lastName = 'Zakas';
+  // console.log(lastName);
+  // Character Literals
+  // ------------------
+  // var text = "This is the letter sigma: \u03a3.";
+  // console.log(text);
+  // console.log(text.length);
+  // The Nature of Strings
+  // ---------------------
+  // var lang = "Java";
+  // lang = lang + "Script";
+  // console.log(lang);
+  // Converting to a String
+  // ----------------------
+  // var age = 11;
+  // var ageAsString = age.toString();
+  // console.log(ageAsString); // the string "11""
+  // var found = true;
+  // var foundAsString = found.toString();
+  // console.log(foundAsString); // the string "true"
+  // var num = 10;
+  // console.log(num.toString()); // "10"
+  // console.log(num.toString(2)); // "1010"
+  // console.log(num.toString(8)); // "12"
+  // console.log(num.toString(10)); // "10"
+  // console.log(num.toString(16)); // "a"
+  // var value1 = 10;
+  // var value2 = true;
+  // var value3 = null;
+  // var value4;
+  // console.log(String(value1)); // "10"
+  // console.log(String(value2)); // "true"
+  // console.log(String(value3)); // "null"
+  // console.log(String(value4)); // "undefined"
 }
