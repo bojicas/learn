@@ -116,4 +116,59 @@ if (Meteor.isClient) {
   // console.log(String(value2)); // "true"
   // console.log(String(value3)); // "null"
   // console.log(String(value4)); // "undefined"
+
+  // Operators
+  // =========
+  // Increment/Decrement
+  // -------------------
+  // var age = 29;
+  // ++age;
+  // console.log(age); // 30
+
+  // var age = 29;
+  // --age;
+  // console.log(age); // 28
+
+  // var age = 29;
+  // var anotherAge = --age + 2;
+  // console.log(age); // 28
+  // console.log(anotherAge); // 30
+
+  // var num1 = 2;
+  // var num2 = 20;
+  // var num3 = --num1 + num2; // 21
+  // var num4 = num1 + num2; // 21
+  // console.log(num3);
+  // console.log(num4);
+
+  // var age = 29;
+  // age++;
+  // console.log(age);
+
+ // var num1 = 2;
+ // var num2 = 20;
+ // var num3 = num1-- + num2;
+ // var num4 = num1 + num2;
+ // console.log(num3); // 22
+ // console.log(num4); // 21
+
+ // var s1 = "2";
+ // var s2 = "z";
+ // var b = false;
+ // var f = 1.1;
+ // var o = {
+ //   valueOf: function () {
+ //     return -1;
+ //   }
+ // };
+ // s1++;
+ // s2++;
+ // b++;
+ // f--;
+ // o--;
+ // console.log(s1); // numeric 3
+ // console.log(s2); // NaN
+ // console.log(b);  // numeric 1
+ // console.log(f);  // numeric 0.10000000000000009
+ // console.log(o);  // numeric -2
 }
