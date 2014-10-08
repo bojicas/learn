@@ -12,4 +12,4 @@ console.log(true == 1); // true
 console.log(true == 2); // false
 console.log(undefined == 0); // false
 console.log(null == 0); // false
-console.log("5" == 5);
+console.log("5" == 5); // true
