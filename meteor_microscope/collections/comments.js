@@ -1,7 +1,7 @@
 Comments = new Meteor.Collection('comments');
 
 Meteor.methods({
-  comment: function (commentAttribute) {
+  comment: function (commentAttributes) {
     var user = Meteor.user();
     var post = Posts.findOne(commentAttributes.postId);
     // ensure the user is logged in
@@ -14,7 +14,7 @@ Meteor.methods({
     if (!post) {
       throw new Meteor.Error(422, "You must comment on a post");
     }
-    comment = _extend(_.pick(commentAttributes, 'postId', 'body'), {
+    comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), {
       userId: user._id,
       author: user.username,
       submitted: new Date().getTime()
