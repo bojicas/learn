@@ -6,7 +6,7 @@ function changeColor() {
   function swapColors() {
     var tempColor = anotherColor;
     anotherColor = color;
-    color = tempColor
+    color = tempColor;
   }
 
   swapColors();
