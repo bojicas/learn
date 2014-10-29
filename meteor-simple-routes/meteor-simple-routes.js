@@ -1,4 +1,6 @@
-Router.route('/', 'Home');
+Router.route('/', function () {
+  this.render('Home');
+});
 
 if (Meteor.isClient) {
 }
