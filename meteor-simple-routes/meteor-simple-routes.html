@@ -5,22 +5,38 @@
 <body>
 </body>
 
-<template name="Home">
-  home
-</template>
-
-<template name="Login">
-  login
-</template>
-
-<template name="AppLayout">
-  <h1>Layout</h1>
-
-  <div>
+<template name="Layout">
+  <div class="container">
     {{> yield}}
   </div>
+</template>
 
-  <footer>
-    Footer text goes here
-  </footer>
+<template name="Blog">
+  <h1>Blog</h1>
+
+  <div id="new-article">
+    <a href="/blog/new">
+      New Article
+    </a>
+  </div>
+
+  <ul>
+    <li>
+      <a href="/blog/1">One</a>
+    </li>
+    <li>
+      <a href="/blog/2">Two</a>
+    </li>
+    <li>
+      <a href="/blog/3">Three</a>
+    </li>
+  </ul>
+</template>
+
+<template name="Article">
+  <h1>Article</h1>
+</template>
+
+<template name="ArticleNew">
+  <h1>New Article</h1>
 </template>

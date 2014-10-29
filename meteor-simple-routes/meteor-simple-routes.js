@@ -1,13 +1,16 @@
 Router.route('/', function () {
-  var isLoggedIn = Session.get('isLoggedIn');
+  this.layout('Layout');
+  this.render('Blog');
+});
 
-  this.layout('AppLayout');
+Router.route('/blog/new', function () {
+  this.layout('Layout');
+  this.render('ArticleNew');
+});
 
-  if (isLoggedIn) {
-    this.render('Home');
-  } else {
-    this.render('Login');
-  }
+Router.route('/blog/:_id', function () {
+  this.layout('Layout');
+  this.render('Article');
 });
 
 if (Meteor.isClient) {
