@@ -7,15 +7,14 @@ Router.configure({
 });
 
 Router.route('/', { name: 'postsList' });
+Router.route('/posts/:id', {
+  name: 'postPage',
+  data: function () {
+    return Posts.findOne(this.params._id);
+  }
+});
 
 Router.map(function () {
-  this.route('postPage', {
-    path: '/posts/:_id',
-    data: function () {
-      return Posts.findOne(this.params._id);
-    }
-  });
-
   this.route('postEdit', {
     path: '/posts/:_id/edit',
     data: function () {
