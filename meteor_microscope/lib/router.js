@@ -6,11 +6,9 @@ Router.configure({
   }
 });
 
-Router.map(function () {
-  this.route('postsList', {
-    path: '/'
-  });
+Router.route('/', { name: 'postsList' });
 
+Router.map(function () {
   this.route('postPage', {
     path: '/posts/:_id',
     data: function () {
