@@ -1,3 +1,5 @@
+Router.route('/', 'Home');
+
 if (Meteor.isClient) {
 }
 
