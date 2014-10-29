@@ -1,6 +1,7 @@
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
+  notFoundTemplate: 'notFound',
   waitOn: function () {
     return [Meteor.subscribe('posts'), Meteor.subscribe('comments')];
   }
@@ -39,5 +40,6 @@ var requireLogin = function (pause) {
 };
 
 Router.onBeforeAction('loading');
+Router.onBeforeAction('dataNotFound', { only: 'postPage' });
 Router.onBeforeAction(requireLogin, { only: 'postSubmit' });
 Router.onBeforeAction(function () { clearErrors(); });
