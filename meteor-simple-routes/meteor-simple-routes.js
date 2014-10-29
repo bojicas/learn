@@ -1,5 +1,13 @@
 Router.route('/', function () {
-  this.render('Home');
+  var isLoggedIn = Session.get('isLoggedIn');
+
+  this.layout('AppLayout');
+
+  if (isLoggedIn) {
+    this.render('Home');
+  } else {
+    this.render('Login');
+  }
 });
 
 if (Meteor.isClient) {
