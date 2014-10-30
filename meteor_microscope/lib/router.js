@@ -22,20 +22,15 @@ Router.map(function () {
       return Posts.findOne(this.params._id);
     }
   });
-
-  this.route('postSubmit', {
-    path: '/submit'
-  });
 });
+
+Router.route('/submit', { name: 'postSubmit' });
 
 var requireLogin = function (pause) {
   if (!Meteor.user()) {
-    if (Meteor.loggingIn()) {
-      this.render(this.loadingTemplate);
-    } else {
-      this.render('accessDenied');
-    }
-    pause();
+    this.render('accessDenied');
+  } else {
+    this.next();
   }
 };
 
