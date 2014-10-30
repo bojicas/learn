@@ -1,4 +1,4 @@
-Posts = new Meteor.Collection('posts');
+Posts = new Mongo.Collection('posts');
 
 Posts.allow({
   update: ownsDocument,
