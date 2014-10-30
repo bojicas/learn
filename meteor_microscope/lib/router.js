@@ -1,46 +1,40 @@
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
+  notFoundTemplate: 'notFound',
   waitOn: function () {
     return [Meteor.subscribe('posts'), Meteor.subscribe('comments')];
   }
 });
 
+Router.route('/', { name: 'postsList' });
+Router.route('/posts/:id', {
+  name: 'postPage',
+  data: function () {
+    return Posts.findOne(this.params._id);
+  }
+});
+
 Router.map(function () {
-  this.route('postsList', {
-    path: '/'
-  });
-
-  this.route('postPage', {
-    path: '/posts/:_id',
-    data: function () {
-      return Posts.findOne(this.params._id);
-    }
-  });
-
   this.route('postEdit', {
     path: '/posts/:_id/edit',
     data: function () {
       return Posts.findOne(this.params._id);
     }
   });
-
-  this.route('postSubmit', {
-    path: '/submit'
-  });
 });
+
+Router.route('/submit', { name: 'postSubmit' });
 
 var requireLogin = function (pause) {
   if (!Meteor.user()) {
-    if (Meteor.loggingIn()) {
-      this.render(this.loadingTemplate);
-    } else {
-      this.render('accessDenied');
-    }
-    pause();
+    this.render('accessDenied');
+  } else {
+    this.next();
   }
 };
 
 Router.onBeforeAction('loading');
+Router.onBeforeAction('dataNotFound', { only: 'postPage' });
 Router.onBeforeAction(requireLogin, { only: 'postSubmit' });
-Router.onBeforeAction(function () { clearErrors(); });
+// Router.onBeforeAction(function () { clearErrors(); });
