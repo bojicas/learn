@@ -1,5 +1,16 @@
 Posts = new Mongo.Collection('posts');
 
+validatePost = function (post) {
+  var errors = {};
+  if (!post.title) {
+    errors.title = 'Please fill in a headline';
+  }
+  if (!post.url) {
+    errors.url = 'Please fill in a URL';
+  }
+  return errors;
+};
+
 Posts.allow({
   update: function (userId, post) {
     return ownsDocument(userId, post);
@@ -16,16 +27,12 @@ Posts.deny({
   }
 });
 
-validatePost = function (post) {
-  var errors = {};
-  if (!post.title) {
-    errors.title = 'Please fill in a headline';
+Posts.deny({
+  update: function (userId, post, fieldNames, modifier) {
+    var errors = validatePost(modifier.$set);
+    return errors.title || errors.url;
   }
-  if (!post.url) {
-    errors.url = 'Please fill in a URL';
-  }
-  return errors;
-};
+});
 
 Meteor.methods({
   postInsert: function (postAttributes) {
