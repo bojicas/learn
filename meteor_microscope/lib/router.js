@@ -3,13 +3,16 @@ Router.configure({
   loadingTemplate: 'loading',
   notFoundTemplate: 'notFound',
   waitOn: function () {
-    return [Meteor.subscribe('posts'), Meteor.subscribe('comments')];
+    return Meteor.subscribe('posts');
   }
 });
 
 Router.route('/', { name: 'postsList' });
 Router.route('/posts/:_id', {
   name: 'postPage',
+  waitOn: function () {
+    return Meteor.subscribe('comments', this.params._id);
+  },
   data: function () {
     return Posts.findOne(this.params._id);
   }
