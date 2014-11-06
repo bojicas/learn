@@ -3,11 +3,10 @@ Router.configure({
   loadingTemplate: 'loading',
   notFoundTemplate: 'notFound',
   waitOn: function () {
-    return [Meteor.subscribe('posts'), Meteor.subscribe('notifications')];
+    return Meteor.subscribe('notifications');
   }
 });
 
-Router.route('/', { name: 'postsList' });
 Router.route('/posts/:_id', {
   name: 'postPage',
   waitOn: function () {
@@ -24,6 +23,13 @@ Router.route('/posts/:_id/edit', {
   }
 });
 Router.route('/submit', { name: 'postSubmit' });
+Router.route('/:postsLimit?', {
+  name: 'postsList',
+  waitOn: function () {
+    var limit = parseInt(this.params.postsLimit) || 5;
+    return Meteor.subscribe('posts', { sort: { submitted: -1 }, limit: limit });
+  }
+});
 
 var requireLogin = function () {
   if (! Meteor.user()) {
