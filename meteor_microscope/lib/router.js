@@ -38,8 +38,8 @@ PostsListController = RouteController.extend({
     return { sort: { submitted: -1 }, limit: this.postsLimit() };
   },
 
-  waitOn: function () {
-    return Meteor.subscribe('posts', this.findOptions());
+  subscriptions: function () {
+    this.postsSub = Meteor.subscribe('posts', this.findOptions());
   },
 
   posts: function () {
@@ -51,6 +51,7 @@ PostsListController = RouteController.extend({
     var nextPath = this.route.path({ postsLimit: this.postsLimit() + this.increment });
     return {
       posts: this.posts(),
+      ready: this.postsSub.ready,
       nextPath: hasMore ? nextPath : null
     };
   }
