@@ -128,11 +128,13 @@
       "_": false,               // Underscore.js
       "$": false,               // jQuery
       "Router": false,          // iron-router
+      "RouteController": false,
 
       // project related globals
       "Posts": true,
       "Comments": true,
       "Notifications": true,
+      "PostsListController": true,
 
       "ownsDocument": true,
       "validatePost": true,
