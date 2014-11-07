@@ -44,7 +44,8 @@ Meteor.methods({
 
     var errors = validatePost(postAttributes);
     if (errors.title || errors.url) {
-      throw new Meteor.Error('invalid-post', 'You must set a title and URL for your post');
+      throw new Meteor.Error('invalid-post',
+                             'You must set a title and URL for your post');
     }
 
     var postWithSameLink = Posts.findOne({ url: postAttributes.url });
