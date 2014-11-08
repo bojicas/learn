@@ -43,7 +43,7 @@ PostsListController = RouteController.extend({
   },
 
   findOptions: function () {
-    return { sort: { submitted: -1 }, limit: this.postsLimit() };
+    return { sort: this.sort, limit: this.postsLimit() };
   },
 
   subscriptions: function () {
@@ -67,8 +67,33 @@ PostsListController = RouteController.extend({
   }
 });
 
-Router.route('/:postsLimit?', {
-  name: 'postsList'
+NewPostsController = PostsListController.extend({
+  sort: { submitted: -1, _id: -1 },
+  nextPath: function () {
+    return Router.routes.newPosts.path({
+      postsLimit: this.postsLimit() + this.increment
+    });
+  }
+});
+
+BestPostsController = PostsListController.extend({
+  sort: { votes: -1, submitted: -1, _id: 1 },
+  nextPath: function () {
+    return Router.routes.bestPosts.path({
+      postsLimit: this.postLimit() + this.increment
+    });
+  }
+});
+
+Router.route('/', {
+  name: 'home',
+  controller: NewPostsController
+});
+Router.route('/new/:postsLimit?', {
+  name: 'newPosts'
+});
+Router.route('/best/:postsLimit?', {
+  name: 'bestPosts'
 });
 
 

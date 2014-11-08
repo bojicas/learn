@@ -135,10 +135,14 @@
       "Comments": true,
       "Notifications": true,
       "PostsListController": true,
+      "NewPostsController": true,
+      "BestPostsController": true,
+      "Errors": true,
 
       "ownsDocument": true,
       "validatePost": true,
-      "createCommentNotification": true
+      "createCommentNotification": true,
+      "throwError": true
     }
 
 }
