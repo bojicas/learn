@@ -135,6 +135,8 @@
       "Comments": true,
       "Notifications": true,
       "PostsListController": true,
+      "NewPostsController": true,
+      "BestPostsController": true,
       "Errors": true,
 
       "ownsDocument": true,
