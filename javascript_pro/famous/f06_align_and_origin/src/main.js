@@ -1,4 +1,4 @@
-// Branching Modifiers
+// Align and Origin
 
 var Engine = famous.core.Engine;
 var Surface = famous.core.Surface;
@@ -7,32 +7,44 @@ var StateModifier = famous.modifiers.StateModifier;
 
 var mainContext = Engine.createContext();
 
-var downMod = new StateModifier({
-  transform: Transform.translate(0, 100, 0)
-});
-
-var rightMod = new StateModifier({
-  transform: Transform.translate(150, 0, 0)
-});
-
-var leftSurface = new Surface({
-  size: [120, 100],
-  content: 'left surface',
+var defaultSquare = new Surface({
+  size: [100, 100],
   properties: {
-    color: 'white',
-    backgroundColor: '#FA5C4F'
+    backgroundColor: '#444444'
   }
 });
 
-var rightSurface = new Surface({
-  size: [120, 100],
-  content: 'right surface',
+var centerCircle = new Surface({
+  size: [15, 15],
   properties: {
-    color: 'white',
-    backgroundColor: '#404040'
+    border: '1px solid #dddddd',
+    borderRadius: '7px'
   }
 });
 
-var node = mainContext.add(downMod);
-node.add(leftSurface);
-node.add(rightMod).add(rightSurface);
+var horizontalRule = new Surface({
+  size: [undefined, 1],
+  properties: {
+    backgroundColor: '#ffffff'
+  }
+});
+
+var verticalRule = new Surface({
+  size: [1, undefined],
+  properties: {
+    backgroundColor: '#ffffff'
+  }
+});
+
+var originModifier = new StateModifier({
+  origin: [0.5, 0.5]
+});
+
+mainContext.add(defaultSquare);
+
+// constructing the crosshair
+
+var node = mainContext.add(originModifier);
+node.add(verticalRule);
+node.add(horizontalRule);
+node.add(centerCircle);
