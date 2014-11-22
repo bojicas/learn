@@ -15,4 +15,13 @@ console.log(pattern.lastIndex); // 0
 // text.search()
 
 var pos = text.search(/at/);
-console.log(pos);
+console.log(pos);               // 1
+
+// text.replace()
+
+var result = text.replace('at', 'ond');
+console.log(result);            // cond, bat, sat, fat
+console.log(text);
+
+result = text.replace(/at/g, 'ond');
+console.log(result);            // cond, bond, sond, fond
