@@ -49,3 +49,17 @@ function htmlEscape(text) {
 }
 
 console.log(htmlEscape('<p class="greeting">Hello world!</p>'));
+// &lt;p class=&quot;greeting&quot;&gt;Hello world!&lt;/p&gt;
+
+// split()
+
+var colorText = 'red,blue,green,yellow';
+
+var colors1 = colorText.split(',');
+console.log(colors1);   // [ 'red', 'blue', 'green', 'yellow' ]
+
+var colors2 = colorText.split(',', 2);
+console.log(colors2);   // [ 'red', 'blue' ]
+
+var colors3 = colorText.split(/[^\,]+/);
+console.log(colors3);   // [ '', ',', ',', ',', '' ]
