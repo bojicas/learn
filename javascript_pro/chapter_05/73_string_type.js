@@ -51,3 +51,12 @@ console.log(stringValue.slice(3, -4));      // lo w
 console.log(stringValue.substring(3, -4));  // hel
 
 console.log(stringValue.substr(3, -4));     // "" (empty string)
+
+// String location methods
+
+stringValue = 'hello world';
+console.log(stringValue.indexOf('o'));        // 4
+console.log(stringValue.lastIndexOf('o'));    // 7
+
+console.log(stringValue.indexOf('o', 6));     // 7
+console.log(stringValue.lastIndexOf('o', 6)); // 4
