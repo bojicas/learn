@@ -11,3 +11,8 @@ console.log(matches);
 console.log(matches.index);     // 0
 console.log(matches[0]);        // cat
 console.log(pattern.lastIndex); // 0
+
+// text.search()
+
+var pos = text.search(/at/);
+console.log(pos);
