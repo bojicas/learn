@@ -19,3 +19,8 @@ function selectFrom(lowerValue, upperValue) {
 
 num = selectFrom(2, 10);
 console.log(num); // number between 2 and 10, inclusive
+
+// random selection from an array
+var colors = ['red', 'green', 'blue', 'yellow', 'black', 'purple', 'brown'];
+var color = colors[selectFrom(0, colors.length-1)];
+console.log(color);
