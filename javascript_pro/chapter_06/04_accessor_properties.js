@@ -18,4 +18,4 @@ Object.defineProperty(book, 'year', {
 });
 
 book.year = 2005;
-console.log(book.edition);  // 12
+console.log(book.edition);  // 2
