@@ -18,3 +18,7 @@ person2.sayName();    // Nicholas
 
 console.log(person1.name);  // Greg
 console.log(person2.name);  // Nicholas
+
+delete person1.name;
+console.log(person1.name);  // Nicholas
+person1.sayName();          // Nicholas
