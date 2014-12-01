@@ -19,3 +19,7 @@ console.log(person1.sayName == person2.sayName);      // true
 
 console.log(Person.prototype.isPrototypeOf(person1)); // true
 console.log(Person.prototype.isPrototypeOf(person2)); // true
+
+console.log(Object.getPrototypeOf(person1));
+console.log(Object.getPrototypeOf(person1) == Person.prototype);  // true
+console.log(Object.getPrototypeOf(person1).name);                 // Nicholas
