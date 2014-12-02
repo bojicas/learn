@@ -21,3 +21,9 @@ console.log(friend instanceof Object);      // true
 console.log(friend instanceof Person);      // true
 console.log(friend.constructor == Person);  // true
 console.log(friend.constructor == Object);  // false
+
+Person.prototype.sayHi = function () {
+  console.log('hi');
+};
+
+friend.sayHi();   // hi
