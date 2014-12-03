@@ -6,11 +6,13 @@ function Person(name, age, job) {
   this.age = age;
   this.job = job;
 
+  var self = this;
+
   // methods
   if (typeof  this.sayName != 'function') {
 
     Person.prototype.sayName = function () {
-      console.log(this.name);
+      console.log(self.name);
     }
 
   }
