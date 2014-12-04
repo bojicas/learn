@@ -9,11 +9,11 @@ function Person(name, age, job) {
   var self = this;
 
   // methods
-  if (typeof  this.sayName != 'function') {
+  if (typeof  this.sayName !== 'function') {
 
     Person.prototype.sayName = function () {
       console.log(self.name);
-    }
+    };
 
   }
 }
