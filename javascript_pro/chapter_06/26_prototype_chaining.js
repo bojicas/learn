@@ -21,4 +21,8 @@ SubType.prototype.getSubValue = function () {
 };
 
 var instance = new SubType();
-console.log(instance.getSuperValue());   // true
+console.log(instance.getSuperValue());      // true
+
+console.log(instance instanceof Object);    // true
+console.log(instance instanceof SuperType); // true
+console.log(instance instanceof SubType);   // true
