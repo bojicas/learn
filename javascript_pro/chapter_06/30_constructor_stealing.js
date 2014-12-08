@@ -1,4 +1,4 @@
-// Constructor Stealing (object masquerading/classicl inheritance)
+// Constructor Stealing (object masquerading/classical inheritance)
 
 function SuperType() {
   this.colors = [ 'red', 'blue', 'green' ];
