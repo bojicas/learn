@@ -19,9 +19,9 @@ function createComparisonFunction(propertyName) {
 var compareNames = createComparisonFunction('name');
 
 // call function
-var result = compare({ name: 'Nicholas' }, { name: 'Greg' });
+var result = compareNames({ name: 'Nicholas' }, { name: 'Greg' });
 
 console.log(result);  // 1
 
 // dereference function - memory can now be reclaimed
-compareNames = null
+compareNames = null;
