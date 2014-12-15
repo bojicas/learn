@@ -12,3 +12,4 @@ var object = {
 
 console.log(object.getName());    // My Object
 console.log((object.getName)());  // My Object
+console.log((object.getName = object.getName)()); // "The Window" in non-strict mode
