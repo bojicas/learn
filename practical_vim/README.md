@@ -15,4 +15,4 @@ Few Tips I Have Learnt
 ----------------------
 
 * ```>G``` indent from current line till end of the file
-* dot command also repeats the inserts (inserted blocks between ```i``` and ```ESC```)
+* dot command also repeats the inserts (inserted blocks between ```i``` and ```<Esc>```)
