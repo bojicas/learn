@@ -11,12 +11,9 @@ Template.Footer.events({
 });
 
 Template.Footer.helpers({
-  /*
-   * Example:
-   *  items: function () {
-   *    return Items.find();
-   *  }
-   */
+  react: function () {
+    return Session.get('react');
+  }
 });
 
 /*****************************************************************************/
@@ -26,6 +23,7 @@ Template.Footer.created = function () {
 };
 
 Template.Footer.rendered = function () {
+  Session.set('react', 'REACTIVE');
 };
 
 Template.Footer.destroyed = function () {
