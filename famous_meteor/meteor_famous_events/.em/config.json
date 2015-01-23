@@ -6,7 +6,7 @@
     },
     "css": {
       "create": true,
-      "extension": ".css"
+      "extension": ".less"
     },
     "js": {
       "create": true,
