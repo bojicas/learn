@@ -1,3 +1,13 @@
 <template name="Home">
-  client/views/home/home.html
+  {{#famousContext id="mainCtx"}}
+    {{#Surface size="[undefined,50]" style="line-height: 50px;" origin="[0,0]" align="[0,0]" class="bg-ltblue" translate="[0,0,0]"}}
+      Very simple Surface
+    {{/Surface}}
+
+    {{#Surface size="[300,300]" align="[.5,.5]" origin="[.5,.5]" class="bg-red centered pretty-box"}}
+      This is a box
+      <br>
+      <a href="http://famview-tutaslabs.rhcloud.com" target="_blank">Click here to launch Famviews demo</a>
+    {{/Surface}}
+  {{/famousContext}}
 </template>
