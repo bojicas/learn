@@ -13,7 +13,7 @@ module.exports = function () {
       call(callback);
   });
 
-  this.Then(/^I see the heading "([^"]*)"$/, function (arg1, callback) {
+  this.Then(/^I see the heading "([^"]*)"$/, function (expectedHeading, callback) {
     helper.world.browser.
       getText('h1', function (error, actualHeading) {
         assert.equal(actualHeading, expectedHeading);
