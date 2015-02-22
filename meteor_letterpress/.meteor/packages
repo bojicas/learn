@@ -7,4 +7,6 @@
 meteor-platform
 autopublish
 insecure
+sanjo:jasmine
+velocity:html-reporter
 xolvio:cucumber
