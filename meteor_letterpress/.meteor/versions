@@ -1,3 +1,4 @@
+alanning:package-stubber@0.0.9
 amplify@1.0.0
 application-configuration@1.0.4
 autopublish@1.0.2
@@ -43,6 +44,8 @@ reactive-var@1.0.4
 reload@1.1.2
 retry@1.0.2
 routepolicy@1.0.4
+sanjo:jasmine@0.12.0
+sanjo:karma@1.4.0
 session@1.0.5
 spacebars@1.0.5
 spacebars-compiler@1.0.4
@@ -53,6 +56,7 @@ underscore@1.0.2
 url@1.0.3
 velocity:core@0.4.5
 velocity:html-reporter@0.4.1
+velocity:meteor-stubs@1.0.0_2
 velocity:node-soft-mirror@0.2.8
 velocity:shim@0.1.0
 velocity:test-proxy@0.0.4
