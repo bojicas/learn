@@ -1,3 +1,4 @@
-function Investment(stock) {
-  this.stock = stock;
+function Investment(params) {
+  this.stock = params.stock;
+  this.shares = params.shares;
 }
