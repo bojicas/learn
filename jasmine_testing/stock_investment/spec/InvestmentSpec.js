@@ -11,20 +11,6 @@ describe('Investment', function () {
     });
   });
 
-  describe('when its stock share price valorizes', function () {
-    beforeEach(function () {
-      stock.sharePrice = 40;
-    });
-
-    it('should have a positive return of investment', function () {
-      expect(investment.roi()).toEqual(1);
-    });
-
-    it('should be a good investment', function () {
-      expect(investment.isGood()).toEqual(true);
-    });
-  });
-
   it('should be of a stock', function () {
     expect(investment.stock).toBe(stock);
   });
@@ -39,5 +25,19 @@ describe('Investment', function () {
 
   it('should have a cost', function () {
     expect(investment.cost).toEqual(2000);
+  });
+
+  describe('when its stock share price valorizes', function () {
+    beforeEach(function () {
+      stock.sharePrice = 40;
+    });
+
+    it('should have a positive return of investment', function () {
+      expect(investment.roi()).toEqual(1);
+    });
+
+    it('should be a good investment', function () {
+      expect(investment.isGood()).toEqual(true);
+    });
   });
 });
