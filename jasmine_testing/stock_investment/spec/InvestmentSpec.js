@@ -37,7 +37,7 @@ describe('Investment', function () {
     });
 
     it('should be a good investment', function () {
-      expect(investment.isGood()).toEqual(true);
+      expect(investment).toBeAGoodInvestment();
     });
   });
 });
