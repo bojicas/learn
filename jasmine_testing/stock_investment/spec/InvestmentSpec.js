@@ -40,4 +40,18 @@ describe('Investment', function () {
       expect(investment).toBeAGoodInvestment();
     });
   });
+
+  describe('when its stock share price devalorizes', function () {
+    beforeEach(function () {
+      stock.sharePrice = 0;
+    });
+
+    it('should have a negative return of investment', function () {
+      expect(investment.roi()).toEqual(-1);
+    });
+
+    it('should be a bad investment', function () {
+      expect(investment).not.toBeAGoodInvestment();
+    });
+  });
 });
